@@ -96,8 +96,8 @@ export default {
                         }
                     }).then(function (response) {
                         if (response) {
-                            console.log('## sso response 获取全局标识 ' + response.data.ssoToken);
-                            console.log(response.data.st);
+                            console.log('sso response 获取全局标识 ' + response.data.ssoToken);
+                            console.log('服务票据 ' + response.data.st);
                             // console.log("## old token " + localStorage.token);
                             // localStorage.ssoToken = response.data.ssoToken;
                             // console.log("## new token " + localStorage.token);
@@ -119,7 +119,7 @@ export default {
                     }).catch(function (error) {
                         console.log('## error ' + error);
                         // _router.push({name: 'Main'});
-                    }) 
+                    }); 
                 }
                 else {
                     // this.$Message.error('Fail!')
